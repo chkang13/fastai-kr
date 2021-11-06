@@ -1,4 +1,4 @@
-# fastai에 오신 것을 환영합니다.
+# fastai에 오신 것을 환영합니다. (fastai 튜토리얼 한국어 번역 저장소)
 > fastai는 최신 모범 사례를 사용하여 빠르고 정확하게 신경망 훈련하는 것을 단순화합니다.
 
 
@@ -6,12 +6,13 @@
 
 ## 설치하기
 
-[Google Colab](https://colab.research.google.com/) 을 사용하면 별도의 설치 없이 fastai를 사용할 수 있습니다. 사실상, 이 문서의 모든 페이지는 대화형 노트북으로도 사용할 수 있습니다. 페이지 상단의 "colab에서 열기"를 클릭하여 엽니다.(Colab 런타임을 "GPU"로 변경하여 빠르게 실행해야 합니다!)
+[Google Colab](https://colab.research.google.com/) 을 사용하면 별도의 설치 없이 fastai를 사용할 수 있습니다. 사실상, 이 문서의 모든 페이지는 대화형 노트북으로도 사용할 수 있습니다. 페이지 상단의 "colab에서 열기"를 클릭하여 열 수 있습니다. (Colab 런타임을 "GPU"로 변경하여 빠르게 실행해야 합니다!)
 자세한 내용은 [Colab 사용하기](https://course.fast.ai/start_colab)에 대한 fast.ai 문서를 참조하세요.
 
-You can install fastai on your own machines with conda (highly recommended), as long as you're running Linux or Windows (NB: Mac is not supported). For Windows, please see the "Running on Windows" for important notes.
+Linux 또는 Windows(NB: Mac은 지원되지 않음)를 실행하는 한 conda를 사용하여 사용자의 컴퓨터에 fastai를 설치할 수 있습니다(권장).
+Windows의 경우 중요한 참고 사항은 "Windows에서 실행"을 참조하십시오.
 
-If you're using [miniconda](https://docs.conda.io/en/latest/miniconda.html) (recommended) then run (note that if you replace `conda` with [mamba](https://github.com/mamba-org/mamba) the install process will be much faster and more reliable):
+만약 [miniconda](https://docs.conda.io/en/latest/miniconda.html) (권장)을 사용한다면 아래의 명령어를 실행하세요. (만약 `conda` 를 사용하는 대신에 [mamba](https://github.com/mamba-org/mamba)를 사용한다면 설치과정이 훨씬 더 빠르고 신뢰할 수 있습니다.:
 ```bash
 conda install -c fastchan fastai
 ```
