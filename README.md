@@ -1,4 +1,4 @@
-# fastai에 오신 것을 환영합니다. (fastai 튜토리얼 한국어 번역 저장소)
+# fastai에 오신 것을 환영합니다. (fast.ai 한국어 번역 튜토리얼)
 > fastai는 최신 모범 사례를 사용하여 빠르고 정확하게 신경망 훈련하는 것을 단순화합니다.
 
 
@@ -18,7 +18,8 @@ Windows의 경우 중요한 참고 사항은 "Windows에서 실행"을 참조하
 conda install -c fastchan fastai
 ```
 
-...or if you're using [Anaconda](https://www.anaconda.com/products/individual) then run:
+...또는 [Anaconda](https://www.anaconda.com/products/individual)를 사용한다면
+아래의 명령어를 실행하세요.:
 ```bash
 conda install -c fastchan fastai anaconda
 ```
