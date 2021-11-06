@@ -1,12 +1,12 @@
-# Welcome to fastai
-> fastai simplifies training fast and accurate neural nets using modern best practices
+# fastai에 오신 것을 환영합니다.
+> fastai는 최신 모범 사례를 사용하여 빠르고 정확한 신경망 교육을 단순화합니다.
 
 
 ![CI](https://github.com/fastai/fastai/workflows/CI/badge.svg) [![PyPI](https://img.shields.io/pypi/v/fastai?color=blue&label=pypi%20version)](https://pypi.org/project/fastai/#description) [![Conda (channel only)](https://img.shields.io/conda/vn/fastai/fastai?color=seagreen&label=conda%20version)](https://anaconda.org/fastai/fastai) [![Build fastai images](https://github.com/fastai/docker-containers/workflows/Build%20fastai%20images/badge.svg)](https://github.com/fastai/docker-containers) ![docs](https://github.com/fastai/fastai/workflows/docs/badge.svg)
 
-## Installing
+## 설치하기
 
-You can use fastai without any installation by using [Google Colab](https://colab.research.google.com/). In fact, every page of this documentation is also available as an interactive notebook - click "Open in colab" at the top of any page to open it (be sure to change the Colab runtime to "GPU" to have it run fast!) See the fast.ai documentation on [Using Colab](https://course.fast.ai/start_colab) for more information.
+[Google Colab](https://colab.research.google.com/) 을 사용하면 별도의 설치 없이 fastai를 사용할 수 있습니다.사실상, 이 문서의 모든 페이지는 대화형 노트북으로도 사용할 수 있습니다. 페이지 상단의 "colab에서 열기"를 클릭하여 엽니다(Colab 런타임을 "GPU"로 변경하여 빠르게 실행해야 합니다!). 자세한 내용은 [Using Colab](https://course.fast.ai/start_colab)에 대한 fast.ai 문서를 참조하세요.
 
 You can install fastai on your own machines with conda (highly recommended), as long as you're running Linux or Windows (NB: Mac is not supported). For Windows, please see the "Running on Windows" for important notes.
 
