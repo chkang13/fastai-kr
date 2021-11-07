@@ -8,10 +8,10 @@ Multi-label classification은 한 가지 분류에만 속하지 않는다는 점
 
 이전과 마찬가지로 데이터셋은 매우 쉽게 다운로드 할 수 있습니다:
 
-'''python
+```python
 path = untar_data(URLs.PASCAL_2007)
 path.ls()
-'''
-'''bash
+```
+```bash
 (#9) [Path('/home/jhoward/.fastai/data/pascal_2007/valid.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test'),Path('/home/jhoward/.fastai/data/pascal_2007/train.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test.csv'),Path('/home/jhoward/.fastai/data/pascal_2007/models'),Path('/home/jhoward/.fastai/data/pascal_2007/segmentation'),Path('/home/jhoward/.fastai/data/pascal_2007/train.csv'),Path('/home/jhoward/.fastai/data/pascal_2007/train')]
-'''
+```
