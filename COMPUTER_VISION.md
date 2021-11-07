@@ -1,5 +1,4 @@
-# 컴퓨터 비전
-> 컴퓨터 비전에 fastai 라이브러리 사용하기
+# 컴퓨터 비전에 fastai 라이브러리 사용하기
 
 이 튜토리얼은 대부분의 컴퓨터 비전 작업에서 [Learner](https://docs.fast.ai/learner.html#Learner)를 빠르게 구축하고 사전 훈련된 모델을 미세 조정하는 방법을 강조합니다.
 
