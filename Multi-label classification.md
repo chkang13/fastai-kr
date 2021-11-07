@@ -17,7 +17,7 @@ path.ls()
 ```
 
 각각의 이미지 레이블에 대한 정보는 'train.csv'라는 파일에 담겨 있습니다. pandas를 이용해 불러와 보도록 합시다:
-'''python
+```python
 df = pd.read_csv(path/'train.csv')
 df.head()
-'''
+```
