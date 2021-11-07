@@ -60,7 +60,7 @@ dls = SegmentationDataLoaders.from_label_func(
  ```
 dls.show_batch(max_n=6)
 ```
-![singleLabelClassification-1](./img/1.png)
+![Seg-1](./img/9.png)
 
 기존의CNN 은 분할 추출 시에 작동하지 않기 때문에, UNet이라는 특별한 모델을 사용해야 해서, Learner을 정의하기 위해unet_learner 을 사용합니다:
 ```
@@ -84,12 +84,14 @@ show_results를 통해 예측된 결과에서 특징을 얻을 수 있습니다.
 ```
 learn.show_results(max_n=6, figsize=(7,8))
  ```
+ ![Seg-1](./img/11.png)
  
 [SegmentationInterpretation](https://docs.fast.ai/interpret.html#SegmentationInterpretation) 클래스를 사용하여 모델의 오류를 정렬한 후 검증 손실에 대해 k개의 가장 높은 기여도를 가진 사례를 구성할 수 있습니다.
 ```
 interp = SegmentationInterpretation.from_learner(learn)
 interp.plot_top_losses(k=3)
 ```
+ 
  
 # 분할 추출 – 데이터 블록 API를 사용할 경우
 [DataLoaders](https://docs.fast.ai/data.core.html#DataLoaders) 안에 있는 데이터를 얻기 위해 데이터 블록 API를 사용할 수도 있습니다. 전에 언급했듯이, 아직 새로운 API를 배우는 것이 익숙하지 않다면 이 부분을 건너 뛰어도 됩니다.
@@ -109,6 +111,7 @@ camvid = DataBlock(blocks=(ImageBlock, MaskBlock(codes)),
 dls = camvid.dataloaders(path/"images", path=path, bs=8)
 dls.show_batch(max_n=6)
 ```
+![Seg-1](./img/12.png)
 
 # 포인트
 이 섹션은 데이터 블록 API를 사용하므로 이전에 건너뛰었다면 이 섹션도 건너뛰는 것을 권장 드립니다.
@@ -150,6 +153,7 @@ im.shape
 ```
 im.to_thumb(160)
 ```
+ ![Seg-1](./img/13.png)
  
 Biwi 데이터 셋 웹사이트에서는 중심점의 위치를 보여주는 각 이미지와 관련된 포즈 텍스트 파일의 형식을 설명해주고 있습니다. 이것의 세부 사항은 우리의 목적에 중요하지 않으므로 중심점을 추출하는데 사용되는 함수를 사용해야 합니다:
 ```
@@ -184,6 +188,7 @@ biwi = DataBlock(
 dls = biwi.dataloaders(path)
 dls.show_batch(max_n=9, figsize=(8,6))
 ```
+![Seg-1](./img/14.png)
 
 이렇게 데이터들을 다 모으면, 이제 나머지 fastai API를 사용할 수 있습니다. [cnn_learner](https://docs.fast.ai/vision.learner.html#cnn_learner) 는 이 경우에 완벽히 작동하며, 라이브러리는 데이터에서 적절한 손실 함수를 추론하게 됩니다:
 ```
@@ -193,6 +198,7 @@ learn.lr_find()
 ```
 (0.005754399299621582, 3.6307804407442745e-07)
 ```
+ ![Seg-1](./img/15.png)
  
 이제 모델을 학습시킬 수 있습니다:
 ```
@@ -218,4 +224,4 @@ math.sqrt(0.0001)
 ```
 learn.show_results()
 ```
-
+![Seg-1](./img/16.png)
