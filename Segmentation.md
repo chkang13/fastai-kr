@@ -60,7 +60,8 @@ dls = SegmentationDataLoaders.from_label_func(
  ```
 dls.show_batch(max_n=6)
 ```
- 
+![singleLabelClassification-1](./img/1.png)
+
 기존의CNN 은 분할 추출 시에 작동하지 않기 때문에, UNet이라는 특별한 모델을 사용해야 해서, Learner을 정의하기 위해unet_learner 을 사용합니다:
 ```
 learn = unet_learner(dls, resnet34)
