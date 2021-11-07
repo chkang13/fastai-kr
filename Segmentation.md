@@ -1,13 +1,23 @@
 # 분할 추출
 
 분할 추출은 이미지의 각 픽셀을 가리키는 항목을 예측하는 것에 어려움이 있습니다. 이 작업을 위해 자동차를 찍은 이미지를 데이터로 가지고 있는 [Camvid dataset](http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) 을 사용할 것입니다. 이미지의 각 픽셀은 "road", "car", "pedestrian 와 같은 레이블을 가지고 있습니다.
-untar_data 함수를 이용해서 데이터를 다운로드 할 수 있습니다.
+
+[untar_data](https://docs.fast.ai/data.external.html#untar_data) 함수를 이용해서 데이터를 다운로드 할 수 있습니다.
+
+```
 path = untar_data(URLs.CAMVID_TINY)
 path.ls()
+```
+```
 (#3) [Path('/home/jhoward/.fastai/data/camvid_tiny/codes.txt'),Path('/home/jhoward/.fastai/data/camvid_tiny/images'),Path('/home/jhoward/.fastai/data/camvid_tiny/labels')]
+```
+
 images 폴더는 이미지를 포함하고 있고, 그에 따른 분할 추출 마스크의 항목은 labels 폴더 안에 있습니다. codes 파일에는 클래스에 따른 정수 값이 들어 있습니다.
+```
 codes = np.loadtxt(path/'codes.txt', dtype=str)
 codes
+```
+```
 array(['Animal', 'Archway', 'Bicyclist', 'Bridge', 'Building', 'Car',
        'CartLuggagePram', 'Child', 'Column_Pole', 'Fence', 'LaneMkgsDriv',
        'LaneMkgsNonDriv', 'Misc_Text', 'MotorcycleScooter', 'OtherMoving',
@@ -15,11 +25,17 @@ array(['Animal', 'Archway', 'Bicyclist', 'Bridge', 'Building', 'Car',
        'SignSymbol', 'Sky', 'SUVPickupTruck', 'TrafficCone',
        'TrafficLight', 'Train', 'Tree', 'Truck_Bus', 'Tunnel',
        'VegetationMisc', 'Void', 'Wall'], dtype='<U17')
-분할 추출 – 높은 수준의 API를 이용하는 경우
-이전처럼 get_image_files 함수는 모든 이미지 파일이름을 불러올 수 있게 합니다:
+```
+
+# 분할 추출 – 높은 수준의 API를 이용하는 경우
+이전처럼 [get_image_files](https://docs.fast.ai/data.transforms.html#get_image_files) 함수는 모든 이미지 파일이름을 불러올 수 있게 합니다:
+```
 fnames = get_image_files(path/"images")
 fnames[0]
+```
+```
 Path('/home/jhoward/.fastai/data/camvid_tiny/images/0006R0_f02910.png')
+```
 레이블 폴더를 자세히 살펴보면:
 (path/"labels").ls()[0]
 Path('/home/jhoward/.fastai/data/camvid_tiny/labels/0016E5_08137_P.png')
