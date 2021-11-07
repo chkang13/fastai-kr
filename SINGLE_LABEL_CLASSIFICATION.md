@@ -99,7 +99,7 @@ files[0].name
 ```
 pat = r'^(.*)_\d+.jpg'
 ```
-정규식을 사용하여 데이터에 레이블을 지정하는 것이 매우 일반적이므로(일반적으로 파일 이름에 레이블이 숨겨져 있음) 다음과 같은 작업을 수행하는 factory ethod가 있습니다.
+정규식을 사용하여 데이터에 레이블을 지정하는 것이 매우 일반적이므로(일반적으로 파일 이름에 레이블이 숨겨져 있음) 다음과 같은 작업을 수행하는 factory method가 있습니다.
 
 ```
 dls = ImageDataLoaders.from_name_re(path, files, pat, item_tfms=Resize(224))
