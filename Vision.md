@@ -1,5 +1,6 @@
 # 분할 추출
-분할 추출은 이미지의 각 픽셀을 가리키는 항목을 예측하는 것에 어려움이 있습니다. 이 작업을 위해 자동차를 찍은 이미지를 데이터로 가지고 있는 Camvid dataset 을 사용할 것입니다. 이미지의 각 픽셀은 "road", "car", "pedestrian 와 같은 레이블을 가지고 있습니다.
+
+분할 추출은 이미지의 각 픽셀을 가리키는 항목을 예측하는 것에 어려움이 있습니다. 이 작업을 위해 자동차를 찍은 이미지를 데이터로 가지고 있는 [Camvid (dataset]http://mi.eng.cam.ac.uk/research/projects/VideoRec/CamVid/) 을 사용할 것입니다. 이미지의 각 픽셀은 "road", "car", "pedestrian 와 같은 레이블을 가지고 있습니다.
 untar_data 함수를 이용해서 데이터를 다운로드 할 수 있습니다.
 path = untar_data(URLs.CAMVID_TINY)
 path.ls()
