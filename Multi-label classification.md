@@ -15,3 +15,9 @@ path.ls()
 ```bash
 (#9) [Path('/home/jhoward/.fastai/data/pascal_2007/valid.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test'),Path('/home/jhoward/.fastai/data/pascal_2007/train.json'),Path('/home/jhoward/.fastai/data/pascal_2007/test.csv'),Path('/home/jhoward/.fastai/data/pascal_2007/models'),Path('/home/jhoward/.fastai/data/pascal_2007/segmentation'),Path('/home/jhoward/.fastai/data/pascal_2007/train.csv'),Path('/home/jhoward/.fastai/data/pascal_2007/train')]
 ```
+
+각각의 이미지 레이블에 대한 정보는 'train.csv'라는 파일에 담겨 있습니다. pandas를 이용해 불러와 보도록 합시다:
+'''python
+df = pd.read_csv(path/'train.csv')
+df.head()
+'''
