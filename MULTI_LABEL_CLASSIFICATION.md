@@ -1,9 +1,9 @@
-# Multi-label classification
+# 다중 레이블 분류
 
 이 작업에서는 다양한 종류의 오브젝트 또는 사람이 포함된 파스칼 데이터셋([Pascal Dataset](http://host.robots.ox.ac.uk/pascal/VOC/))을 사용할 것입니다. 이 데이터셋은 한 가지 종류의 이미지 인스턴스뿐만 아니라 주변의 바운딩 박스까지 탐지할 수 있습니다. 여기에선 주어진 이미지에서 모든 클래스를 예측하고자 합니다.
 
 
-Multi-label classification은 한 가지 분류에만 속하지 않는다는 점에서 single-label classification의 연장선 상에 있습니다. 한 이미지 안에 사람과 말이 함께 있을 수도 있고, 어떠한 범주에도 속하지 않을 수도 있습니다.
+다중 레이블 분류는 한 가지 분류에만 속하지 않는다는 점에서 single-label classification의 연장선 상에 있습니다. 한 이미지 안에 사람과 말이 함께 있을 수도 있고, 어떠한 범주에도 속하지 않을 수도 있습니다.
 
 
 이전과 마찬가지로 데이터셋은 매우 쉽게 다운로드 할 수 있습니다:
@@ -114,7 +114,7 @@ interp.plot_top_losses(9)
 
 ![image4](https://user-images.githubusercontent.com/68338919/140639999-8a68cddd-326a-4066-bea5-965eaad4c532.png)
 
-## Multi-label classification - 데이터 블럭 API
+## 다중 레이블 분류 - 데이터 블럭 API를 통해
 [DataLoaders](https://docs.fast.ai/data.core.html#DataLoaders)에서 데이터를 얻기 위해 데이터 블럭 API를 사용할 수 있습니다. 전에서 언급했다시피 아직 새로운 API에 대해 배우기가 힘들다면 이 파트는 넘어가도 괜찮습니다.
 
 데이터프레임에서 데이터가 어떻게 구조화되어 있는지 생각해봅시다:
