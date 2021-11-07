@@ -29,7 +29,7 @@ df.head()
 |**3**|000012.jpg|car|False
 |**4**|000016.jpg|bicycle|True
 
-## Multi-label classification - High-level API의 사용
+## 다중 레이블 분류 - High-level API의 사용
 이는 꽤나 직관적입니다: 각각의 파일에 대해 서로 다른 레이블들(스페이스로 분류된)을 얻고 마지막 열은 그 데이터의 검증 집합(validation set) 포함 여부를 알려줍니다. [DataLoaders](https://docs.fast.ai/data.core.html#DataLoaders)에서 이들을 빨리 얻기 위해서 `from_df`라는 팩토리 메소드를 사용합니다. 모든 이미지가 있는 기본 경로, 기본 경로와 파일 이름 사이에 추가할 폴더 (여기선 `train`), 검증 집합을 위한 `valid_col` (지정하지 않은 경우 임의의 하위 집합을 선택), 레이블을 분류하기 위한 `label_delim`, 그리고 이전처럼 `item_tfms`와 `batch_tfms`을 지정할 수 있습니다.
 
 `fn_col`과 `label_col`은 기본적으로 각각 첫 번째 열과 두 번째 열로 설정되므로 따로 지정해줄 필요가 없습니다.
