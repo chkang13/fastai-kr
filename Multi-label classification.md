@@ -21,3 +21,11 @@ path.ls()
 df = pd.read_csv(path/'train.csv')
 df.head()
 ```
+||fname|labels|is_valid|
+|:---:|:---|:---|:---|
+|**0**|000005.jpg|chair|True
+|**1**|000007.jpg|car|True
+|**2**|000009.jpg|horse person|True
+|**3**|000012.jpg|car|False
+|**4**|000015.jpg|bicycle|True
+
