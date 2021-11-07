@@ -51,16 +51,21 @@ dls = ImageDataLoaders.from_name_func(path, files, label_func, item_tfms=Resize(
 dls.show_batch()
 ```
 
-이미지
+![singleLabelClassification-1](./img/1.png)
 
 그런 다음 Learner를 만들 수 있습니다. Learner는 데이터와 훈련용 모델을 결합하고 전송 학습을 사용하여 두 줄의 코드로 사전 훈련된 모델을 미세하게 조정하는 fastai 객체입니다.
 ```
 learn = cnn_learner(dls, resnet34, metrics=error_rate)
 learn.fine_tune(1)
 ```
-표
+|epoch|train_loss|valid_loss|error_rate|time|
+|-----|---|---|---|---|
+|0	|0.148785	|0.013430	|0.006089| 00:13|
 
-표
+|epoch|train_loss|valid_loss|error_rate|time|
+|-----|---|---|---|---|
+|0	|0.047292	|0.013792	|0.005413| 00:16|
+
 
 첫 번째 라인은 ImageNet에서 사전 훈련을 받은 ResNet34라는 모델을 다운로드하여 특정 문제에 맞게 수정했습니다. 그런 다음 해당 모델을 미세 조정했고, 비교적 짧은 시간 내에 오류율이 0.3%인 모델을 얻게 됩니다. 놀랍습니다!
 
@@ -77,7 +82,7 @@ learn.predict(files[0])
 learn.show_results()
 ```
 
-이미지
+![singleLabelClassification-1](./img/2.png)
 
 텍스트, 표 형식과 같은 다른 응용 프로그램 또는 이 튜토리얼에서 다루는 다른 문제들을 확인해 보세요. 그러면 모두 일관된 API를 공유하여 데이터를 수집하고 Learner를 생성하고 모델을 훈련시키고 예측하는 것을 볼 수 있습니다.
 
@@ -106,7 +111,7 @@ dls = ImageDataLoaders.from_name_re(path, files, pat, item_tfms=Resize(224))
 dls.show_batch()
 ```
 
-이미지
+![singleLabelClassification-1](./img/3.png)
 
 37종의 다른 품종 간에 고양이 또는 개의 정확한 품종을 분류하는 것이 더 어려운 문제이기 때문에 데이터 증가를 사용하기 위해 DataLoader의 정의를 약간 변경할 것입니다.
 
@@ -120,7 +125,7 @@ dls = ImageDataLoaders.from_name_re(path, files, pat, item_tfms=Resize(460),
 dls.show_batch()
 ```
 
-이미지
+![singleLabelClassification-1](./img/4.png)
 
 그런 다음 이전과 동일하게 Learner를 만들고 모델을 훈련시킬 수 있습니다.
 ```
@@ -135,7 +140,7 @@ learn.lr_find()
 SuggestedLRs(lr_min=0.010000000149011612, lr_steep=0.0063095735386013985)
 ```
 
-그래프
+![singleLabelClassification-1](./img/5.png)
 
 이 그래프는 학습 속도 측정기의 그래프를 표시하고 두 가지 제안(최소를 10으로 나눈 것과 가장 가파른 기울기)을 제공합니다. 여기서는 3e-3을 사용합시다. 또한 좀 더 많은 수의 epoch를 할 것입니다.
 
@@ -143,17 +148,23 @@ SuggestedLRs(lr_min=0.010000000149011612, lr_steep=0.0063095735386013985)
 learn.fine_tune(2, 3e-3)
 ```
 
-표
+|epoch|train_loss|valid_loss|error_rate|time|
+|-----|---|---|---|---|
+|0	|1.270041	|0.308686	|0.109608| 00:16|
 
-
-표
+|epoch|train_loss|valid_loss|error_rate|time|
+|-----|---|---|---|---|
+|0	|0.468626	|0.355379	|0.117050| 00:21|
+|1	|0.418402	|0.384385	|0.110961| 00:20|
+|2	|0.267954	|0.220428	|0.075778| 00:21|
+|3	|0.143201	|0.203174	|0.064953| 00:20|
 
 show_results를 사용하여 몇 가지 예측을 살펴볼 수 있습니다.
 ```
 learn.show_results()
 ```
 
-이미지
+![singleLabelClassification-1](./img/6.png)
 
 또 다른 유용한 것은 interpretation 객체로서, 모델이 어디에서 더 나쁜 예측을 했는지 보여줄 수 있습니다.
 ```
@@ -163,7 +174,7 @@ interp = Interpretation.from_learner(learn)
 interp.plot_top_losses(9, figsize=(15,10))
 ```
 
-이미지
+![singleLabelClassification-1](./img/7.png)
 
 # 단일 레이블 분류 - data block API를 통해
 
@@ -196,15 +207,5 @@ dls = pets.dataloaders(untar_data(URLs.PETS)/"images")
 dls.show_batch(max_n=9)
 ```
 
-이미지
-
-
-
-
-
-
-
-
-
-
+![singleLabelClassification-1](./img/8.png)
 
